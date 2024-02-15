@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="margin: 0">
+    <form onsubmit="handleFormSubmit(event)">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+      <label for="phone">Phone No</label>
+      <input type="tel" name="phone" id="phone" />
+      <button type="submit">Submit</button>
+    </form>
+    <!-- Add Unordered List Element Here -->
+    <ul id="userList"></ul>
+    
+  </body>
+  <script >// Function to handle form submission
+    function handleFormSubmit(event){
+      event.preventDefault();
+            var user = {
+                username:event.target.username.value,
+                email:event.target.email.value ,
+                phone:event.target.phone.value
+            };
+
+            localStorage.setItem(user.email, JSON.stringify(user));
+            displayUsers(user);
+        }
+
+        function displayUsers(user) {
+            var userList = document.getElementById('userList');
+            userList.innerHTML +=`<li>${user.username}, ${user.email},${user.phone}</li>`;
+           
+        }
+        
+//module.exports = handleFormSubmit;
+    
+  </script>
+</html>

@@ -1,0 +1,68 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #fff;
+      color: #333;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      height: 50px; /* Height for the first header */
+    }
+    header h6 {
+      margin-left: 20px;
+    }
+    nav {
+      background-color: #fff;
+      padding: 10px;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .blue-header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 50px; /* Add space below the first header */
+    }
+    .container {
+      text-align: center;
+      margin-top: 250px; /* Adjust this value based on the combined heights of headers */
+    }
+    .button {
+      padding: 10px 20px;
+      border: 2px solid #007bff; /* Set border color to blue */
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .button-blue {
+      background-color: #fff; /* Set background color to white */
+      color: #007bff; /* Set text color to blue */
+    }
+    .button-blue:hover {
+      background-color: #f5f5f5; /* Change background color on hover */
+    }
+    .button-black {
+      color: #000; /* Set text color to black */
+      border: 2px solid #007bff; /* Set border color to blue */
+      
+    }
+    .button-black:hover {
+      background-color: #fff; /* Change background color on hover to white */
+    }
+  
